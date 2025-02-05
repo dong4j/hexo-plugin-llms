@@ -1,0 +1,28 @@
+{
+  "name": "hexo-plugin-llms",
+  "version": "1.0.0",
+  "description": "A Hexo plugin to generate llms.txt and llms-full.txt files for LLMs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-plugin",
+    "llms",
+    "markdown"
+  ],
+  "author": "dong4j",
+  "license": "MIT",
+  "dependencies": {
+    "hexo": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dong4j/hexo-plugin-llms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dong4j/hexo-plugin-llms/issues"
+  },
+  "homepage": "https://github.com/dong4j/hexo-plugin-llms#readme"
+} 
