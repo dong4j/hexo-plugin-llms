@@ -1,6 +1,6 @@
 {
   "name": "hexo-plugin-llms",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Hexo plugin to generate llms.txt and llms-full.txt files for LLMs",
   "main": "index.js",
   "scripts": {

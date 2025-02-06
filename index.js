@@ -11,8 +11,8 @@ hexo.extend.generator.register('llms', function (locals) {
     sort: 'desc'
   }, hexo.config.llmstxt);
 
-  config.postsHeader = hexo.config.title || 'Blog';
-  config.description = hexo.config.description || 'This is a summary of the blog content.';
+  config.postsHeader = config.postsHeader || hexo.config.title;
+  config.description = config.description || hexo.config.description;
 
   const llmsFilePath = path.join(hexo.public_dir, 'llms.txt');
   const llmsFullFilePath = path.join(hexo.public_dir, 'llms-full.txt');
