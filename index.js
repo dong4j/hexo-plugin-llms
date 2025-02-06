@@ -8,10 +8,11 @@ hexo.extend.generator.register('llms', function (locals) {
   const config = Object.assign({
     generate_llms_full: false,
     debug: false,
-    postsHeader: hexo.config.title || 'Blog',
-    description: hexo.config.description || 'This is a summary of the blog content.',
     sort: 'desc'
   }, hexo.config.llmstxt);
+
+  config.postsHeader = hexo.config.title || 'Blog';
+  config.description = hexo.config.description || 'This is a summary of the blog content.';
 
   const llmsFilePath = path.join(hexo.public_dir, 'llms.txt');
   const llmsFullFilePath = path.join(hexo.public_dir, 'llms-full.txt');
@@ -21,7 +22,7 @@ hexo.extend.generator.register('llms', function (locals) {
     fs.mkdirSync(hexo.public_dir, { recursive: true });
   }
 
-  let llmsContent = `# ${config.postsHeader}\n\n> ${config.description}\n\n## 文章列表\n\n`;
+  let llmsContent = `# ${config.postsHeader}\n\n> ${config.description}\n\n## Article List\n\n`;
   let llmsFullContent = config.generate_llms_full ? llmsContent : '';
 
   // 根据配置决定排序方向
@@ -34,7 +35,6 @@ hexo.extend.generator.register('llms', function (locals) {
         title,
         raw,
         description,
-        source,
       } = post;
 
       // 获取文件名（不含路径）
